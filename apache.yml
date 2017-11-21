@@ -3,14 +3,14 @@
   vars_files:
     - vars/main.yml
   pre_tasks:
-    - name: Erstelle Ordner fuer VHost  
+    - name: Erstelle Ordner {{ docroot }} fuer VHost  
       file:
         path: "{{ docroot }}"
         state: directory
         owner: www-data
         group: www-data
         mode: 0755
-    - name: Kopiere Webseite
+    - name: Kopiere Webseite nach {{ docroot }}/index.html
       copy:
         src: "Files/Index.html"
         dest: "{{ docroot }}/index.html"
