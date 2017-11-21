@@ -5,7 +5,7 @@
   pre_tasks:
     - name: Erstelle Ordner fuer VHost  
       file:
-        path: {{ docroot }}
+        path: "{{ docroot }}"
         state: directory
         owner: www-data
         group: www-data
