@@ -12,7 +12,7 @@
         mode: 0755
     - name: Kopiere Webseite
       copy:
-        src: "files/index.html"
+        src: "Files/index.html"
         dest: "/var/www/vhosts/defaultwebsite/index.html"
         owner: www-data
         group: www-data
