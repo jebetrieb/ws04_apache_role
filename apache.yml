@@ -5,7 +5,7 @@
   pre_tasks:
     - name: Erstelle Ordner fuer VHost  
       file:
-        path: "/var/www/vhosts/defaultwebsite"
+        path: {{ docroot }}
         state: directory
         owner: www-data
         group: www-data
@@ -13,7 +13,7 @@
     - name: Kopiere Webseite
       copy:
         src: "Files/Index.html"
-        dest: "/var/www/vhosts/defaultwebsite/index.html"
+        dest: "{{ docroot }}/index.html"
         owner: www-data
         group: www-data
         mode: 0644
